@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".InputActivity"
+    tools:showIn="@layout/activity_input">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tcustomer"
+            android:layout_width="200px"
+            android:layout_height="130px"
+            android:text="顧客名"
+            />
+        <Spinner
+            android:id="@+id/customers"
+            android:spinnerMode="dialog"
+            android:layout_width="500px"
+            android:layout_height="130px"
+            android:layout_marginLeft="30px"
+            />
+        <Button
+            android:layout_width="100px"
+            android:layout_height="130px"
+            android:layout_marginLeft="30px"
+            android:id="@+id/add_customer"
+            android:text="+"/>
+        <Button
+            android:layout_width="100px"
+            android:layout_height="130px"
+            android:layout_marginLeft="30px"
+            android:id="@+id/delete_customer"
+            android:text="-"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <EditText
+        android:id="@+id/title_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130px"
+        android:hint="タイトル"
+        />
+    <EditText
+        android:id="@+id/content_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_edit_text"
+        android:hint="内容" />
+    <Button
+        android:id="@+id/date_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_edit_text"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/times_button"
+        android:text="----/--/--"
+        style="@style/Widget.AppCompat.Button.Borderless" />
+    <Button
+        android:id="@id/times_button"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_edit_text"
+        android:layout_alignParentRight="true"
+        android:text="--:--"
+        style="@style/Widget.AppCompat.Button.Borderless" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="550px"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/add_memo_button"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="登録" />
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="キャンセル" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</RelativeLayout>
